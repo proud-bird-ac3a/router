@@ -1,0 +1,6 @@
+name = "edgetunnel"
+main = "worker.js"
+compatibility_date = "2025-06-13"
+
+[vars]
+UUID = "d342d11e-d424-4583-b12e-524ab9f0a7e4"
