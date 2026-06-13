@@ -1,0 +1,3 @@
+function d0(req) { const o = String(req?.cf?.asOrganization||'').toLowerCase(); if (o.includes('chinanet')||o.includes('chinatelecom')) return 'ct'; if (o.includes('chinamobile')||o.includes('cmcc')) return 'cmcc'; if (o.includes('china169')||o.includes('china unicom')) return 'cu'; return 'cf'; }
+async function d1(req, n, p) { const ips = []; for (let i = 0; i < (n||16); i++) ips.push('104.16.' + Math.floor(Math.random()*256) + '.' + Math.floor(Math.random()*256) + ':' + (p===-1 ? [443,2053,2083,2087,2096,8443][Math.floor(Math.random()*6)] : p) + '#' + d0(req) + (i+1)); return [ips, ips.join('\n')]; }
+export { d0, d1 };
